@@ -1,0 +1,126 @@
+.about__slider {
+  position: relative;
+  height: 300vh;
+
+  &__container {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-left: calc((100vw - 4rem) / 12);
+  }
+
+  &__content {
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  &__item {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    width: calc((100vw - 4rem) * (8 / 12));
+    max-width: calc(1440px * 8 / 12);
+    will-change: transform;
+    opacity: 0;
+    transform: translateY(300px);
+    transition: opacity 0.7s ease-out,
+      transform 0.7s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+    &.inView {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    &__image {
+      position: relative;
+      width: 448px;
+      min-width: 448px;
+      height: 604px;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+
+      &__title {
+        margin-top: 1rem;
+
+        span {
+          font-family: var(--font-pphatton);
+          font-style: italic;
+        }
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 145%;
+        margin-top: 5rem;
+      }
+
+      button {
+        margin-top: 2rem;
+      }
+
+      &__icon {
+        position: relative;
+        width: 78px;
+        height: 67px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 768px) {
+  .about__slider {
+    margin-top: 4rem;
+    height: auto;
+
+    &__container {
+      position: unset;
+      padding-left: 0;
+      height: auto;
+    }
+
+    &__content {
+      flex-direction: column;
+    }
+
+    &__item {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      gap: 0;
+
+      &__image {
+        width: 75vw;
+        min-width: auto;
+        aspect-ratio: 280 / 377;
+        height: auto;
+      }
+
+      &__content {
+        position: relative;
+        padding: 0 1rem;
+
+        &__icon {
+          position: absolute;
+          top: -59px;
+          left: 1rem;
+          width: 59px;
+          height: 51px;
+        }
+
+        p {
+          margin-top: 2rem;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+.footer {
+  background-color: var(--footer-background);
+  padding: 4rem var(--side-padding);
+  transition: transform 0.5s ease-in-out;
+  color: var(--text-color-inverted);
+
+  > div:has(> button) {
+    display: none;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: clamp(2rem, 10vw, 25rem);
+    width: 100%;
+    word-wrap: break-word;
+    hyphens: auto;
+    white-space: nowrap;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+
+    &__subtitle {
+      font-size: 1.5rem;
+      margin-left: 1rem;
+
+      span {
+        font-family: var(--font-pphatton);
+        font-style: italic;
+      }
+    }
+
+    &__left {
+      grid-column: span 7;
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      justify-content: space-between;
+
+      button {
+        --arrow-size: 1.5rem;
+        font-size: 1.5rem !important;
+        border-color: var(--text-color-inverted) !important;
+
+        a {
+          color: var(--text-color-inverted) !important;
+        }
+
+        &:hover {
+          border-color: var(--text-color) !important;
+          
+          svg {
+            transform: translateX(calc(436px + var(--gap))) !important;
+          }
+        }
+      }
+    }
+
+    &__socials {
+      margin-top: 0.5rem;
+      grid-column: 10 / span 3;
+
+      &__title {
+        font-size: 1.25rem;
+        font-weight: 500;
+
+        span {
+          font-family: var(--font-pphatton);
+          font-style: italic;
+        }
+      }
+
+      &__items {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+
+        a {
+          padding: 0.5rem 1.5rem;
+          font-weight: 500;
+          text-transform: uppercase;
+          border: 1px solid #fff;
+          border-radius: 3rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 2.5rem 1.5rem;
+
+    > div:has(> button) {
+      display: block;
+      margin-top: 2rem;
+
+      button {
+        --arrow-size: 3rem !important;
+        font-size: 2rem !important;
+        width: 100% !important;
+      }
+    }
+
+    &__title {
+      font-size: 4rem;
+      white-space: normal;
+      display: flex;
+      flex-direction: column;
+
+      span:first-child {
+        width: 100%;
+        white-space: nowrap;
+        word-break: keep-all;
+      }
+
+      span:last-child {
+        align-self: flex-start;
+      }
+    }
+    &__content {
+      grid-template-columns: 1fr;
+      margin-top: 1rem;
+
+      &__subtitle {
+        font-size: 1.25rem;
+        margin-left: 0;
+      }
+
+      &__left {
+        grid-column: auto;
+        gap: 0;
+
+        button {
+          display: none;
+        }
+      }
+
+      &__socials {
+        margin-top: 2rem;
+        grid-column: auto;
+
+        &__title {
+          font-size: 1rem;
+        }
+
+        &__items {
+          display: flex;
+          gap: 1rem;
+          margin-top: 1rem;
+
+          a {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

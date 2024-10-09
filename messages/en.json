@@ -1,0 +1,166 @@
+{
+  "nav": {
+    "menu": {
+      "home": "Home",
+      "about": "About Us",
+      "events": "Event Organization",
+      "video-production": "Video Production",
+      "contact": "Contact"
+    },
+    "sidearea": {
+      "title": {
+        "one": "Featured",
+        "two": "Project"
+      },
+      "services": {
+        "title": {
+          "one": "Our",
+          "two": "Services"
+        },
+        "service-1": {
+          "title": "Event Organization"
+        },
+        "service-2": {
+          "title": "Concepting and Screening Ad Campaigns"
+        },
+        "service-3": {
+          "title": "Film Production"
+        },
+        "service-4": {
+          "title": "Producing Music Videos"
+        },
+        "socials": {
+          "title": {
+            "one": "Our",
+            "two": "Socials"
+          }
+        }
+      },
+      "socials": {
+        "title": {
+          "one": "Our",
+          "two": "Socials"
+        }
+      },
+      "cta": "Reach out to us"
+    },
+    "locale": {
+      "en": "en",
+      "sr": "sr"
+    }
+  },
+  "footer": {
+    "title": {
+      "one": "RealVibe ",
+      "two": "Studio®"
+    },
+    "subtitle": {
+      "one": "Inspiration in",
+      "two": "Action -",
+      "three": "Art in ",
+      "four": "Creation"
+    },
+    "socials": {
+      "title": {
+        "one": "Our",
+        "two": "Social Media"
+      }
+    }
+  },
+  "home": {
+    "hero": {
+      "title": {
+        "one": "RealVibe ",
+        "two": "Studio®"
+      },
+      "subtitle": {
+        "one": "Inspiration in",
+        "two": "Action -",
+        "three": "Art in ",
+        "four": "Creation"
+      },
+      "cta": "Get started",
+      "demo": {
+        "title": "RealVibe Demo Reel",
+        "description": "RealVibe excels at organizing professional<br/>business events that inspire, engage, and<br/>leave a lasting impression."
+      }
+    },
+    "services": {
+      "service-1": {
+        "title": "Event Organization",
+        "description": "Effective advertising is a <span>powerful tool</span> to reach your target audience and communicate with the public. We craft high-quality, unique ads that get your brand noticed, and showcase the value of your product or <span>service</span>."
+      },
+      "service-2": {
+        "title": "Concepting and Screening Ad Campaigns",
+        "description": "Effective advertising is a <span>powerful tool</span> to reach your target audience and communicate with the public. We craft high-quality, unique ads that get your brand noticed, and showcase the value of your product or <span>service</span>."
+      },
+      "service-3": {
+        "title": "Film Production",
+        "description": "Effective advertising is a <span>powerful tool</span> to reasch your target audience and communicate with the public. We craft high-quality, unique ads that get your brand noticed, and showcase the value of your product or <span>service</span>."
+      },
+      "service-4": {
+        "title": "Producing Music Videos",
+        "description": "Effective advertising is a <span>powerful tool</span> to reach your target audience and communicate with the public. We craft high-quality, unique ads that get your brand noticed, and showcase the value of your product or <span>service</span>."
+      }
+    },
+    "about": {
+      "title": "Everything you need under one roof",
+      "description": "At RealVibe, we pride ourselves on being your comprehensive solution for all event organization and audio-visual production needs. Our extensive range of services guarantees we have the expertise and resources to deliver any project seamlessly, meeting all your event organization and audio-visual production needs. From the initial planning stages to the final execution, our dedicated team will support you every step of the way. Discover the convenience and excellence of having everything under one roof with RealVibe Studio. Contact us today to discuss your next event!",
+      "cta": "Contact Us",
+      "company-values": {
+        "our-mission": {
+          "title": {
+            "one": "Our ",
+            "two": "Mission"
+          },
+          "description": "At RealVibe, we pride ourselves on being your comprehensive solution for all event organization and audio-visual production needs. Our extensive range of services guarantees we have the expertise and resources to deliver any project seamlessly",
+          "cta": "More About Us"
+        }
+      }
+    },
+    "why-us": {
+      "title": "Why work with us",
+      "reasons": {
+        "reason-1": {
+          "title": {
+            "one": "Personalized",
+            "two": "Service",
+            "three": ""
+          },
+          "description": "We believe every event is unique. Through close collaboration with you, we craft a personalized approach that ensures your event is a true reflection of your vision and personality."
+        },
+        "reason-2": {
+          "title": {
+            "one": "Experienced &",
+            "two": "Creative",
+            "three": "team"
+          },
+          "description": "Our team's unique blend of experience and innovation drives the creation of exceptional, visionary projects."
+        },
+        "reason-3": {
+          "title": {
+            "one": "Stress-Free",
+            "two": "Experience",
+            "three": ""
+          },
+          "description": "RealVibe studio handles everything from initial planning to flawless execution, ensuring a smooth and efficient process that brings your vision to life."
+        },
+        "reason-4": {
+          "title": {
+            "one": "Really Good",
+            "two": "Vibe",
+            "three": ""
+          },
+          "description": "Our positive, collaborative spirit fosters a great working environment and exceptional outcomes."
+        }
+      }
+    },
+    "contact": {
+      "title": "Reach out! We will definitely have a solution for your needs",
+      "linkText": "Contact us"
+    }
+  },
+  "notFoundPage": {
+    "title": "404"
+  }
+}

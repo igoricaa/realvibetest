@@ -1,0 +1,107 @@
+.button {
+  --arrow-size: 3rem;
+  --gap: 1rem;
+
+  background-color: var(--text-color);
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  padding: 1.5rem 3rem;
+  transition: background-color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap);
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  cursor: pointer;
+
+  & > *:not(svg) {
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    background-color: var(--text-color);
+    color: var(--text-color-inverted);
+  }
+
+  svg {
+    width: var(--arrow-size);
+    height: var(--arrow-size);
+    transition: all 0.3s ease-in-out;
+
+    path {
+      fill: var(--color-main);
+    }
+  }
+
+  &:hover {
+    background-color: var(--text-color-inverted);
+
+    & > *:not(svg) {
+      transform: translateX(calc(-1 * var(--gap) - var(--arrow-size)));
+      color: var(--text-color);
+      background-color: var(--text-color-inverted);
+    }
+
+    svg {
+      transform: translateX(calc(260px + var(--gap)));
+    }
+  }
+
+  &.secondary {
+    --gap: 0.5rem;
+    --arrow-size: 1.5rem;
+    background-color: transparent;
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--text-color);
+
+    & > *:not(svg) {
+      color: var(--text-color);
+      background-color: transparent;
+      transition: all 0.3s ease-in-out;
+    }
+
+    svg {
+      path {
+        fill: var(--contrast-color);
+      }
+    }
+
+    &:hover {
+      background-color: var(--contrast-color);
+      color: var(--contrast-color-inverted);
+
+      & > *:not(svg) {
+        transform: translateX(calc(-1 * var(--gap) - var(--arrow-size)));
+        color: var(--text-color-inverted);
+      }
+
+      svg {
+        transform: translateX(calc(133px + var(--gap)));
+
+        path {
+          fill: var(--text-color-inverted);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 768px) {
+  .button {
+    --arrow-size: 28px;
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 1.25rem 2rem;
+    justify-content: center;
+
+    &.secondary {
+      width: fit-content;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.whyUs {
+  max-width: calc(1440px + 2 * var(--side-padding));
+  margin: 4rem auto 0;
+  padding-left: var(--side-padding);
+  padding-right: var(--side-padding);
+
+  &__reasons {
+    margin-top: 8.6rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 768px) {
+  .whyUs {
+    margin-top: 3.5rem;
+
+    &__reasons {
+      margin-top: 3rem;
+      grid-template-columns: 1fr;
+      gap: 4.875rem;
+    }
+  }
+}

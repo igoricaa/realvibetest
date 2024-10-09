@@ -1,0 +1,105 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--side-padding);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: transform 0.5s ease-in-out;
+
+  &__helper__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  &__logoWrapper {
+    position: relative;
+
+    width: 81px;
+    height: 44px;
+  }
+
+  &__nav__mobile {
+    display: none;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    &__desktopMenu {
+      display: flex;
+      gap: 4rem;
+      align-items: center;
+      text-transform: uppercase;
+      font-weight: 500;
+
+      &__item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        &::after {
+          content: '';
+          display: block;
+          width: 1.5rem;
+          height: 1.5rem;
+          background-image: url('/icons/arrow-white.svg');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+
+        &:hover {
+          &::after {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+
+    &__side__area {
+      position: relative;
+      width: 20px;
+      height: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    &__logoWrapper {
+      width: 59px;
+      height: 32px;
+    }
+    &__nav {
+      display: none;
+    }
+
+    &__nav__mobile {
+      display: flex;
+
+      &__menuWrapper {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+      }
+
+      svg {
+        width: 16px;
+        height: 33px;
+
+        path {
+          fill: var(--foreground);
+        }
+      }
+    }
+  }
+}

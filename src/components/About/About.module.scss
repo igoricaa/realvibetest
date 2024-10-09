@@ -1,0 +1,85 @@
+.about {
+  padding: 7rem var(--side-padding) 0;
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    h2 {
+      font-weight: 600;
+      inline-size: 16ch;
+    }
+  }
+
+  &__description {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem;
+    max-width: 1440px;
+    margin: 5rem auto 0;
+
+    p {
+      grid-column: 4 / span 9;
+      position: relative;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 79px;
+        height: 90px;
+        background: url('/about/about-us-shape.svg') no-repeat center center;
+        background-size: cover;
+        position: absolute;
+        top: -45px;
+        left: -90px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about {
+    &__header {
+      h2 {
+        // inline-size: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    &__header {
+      h2 {
+        order: 1;
+      }
+
+      div:has(button) {
+        order: 3;
+        margin-top: 3rem;
+      }
+    }
+
+    &__description {
+      order: 2;
+      margin-top: 2rem;
+
+      p {
+        grid-column: span 12;
+
+        &::before {
+          width: 56px;
+          height: 66px;
+          top: -1.5rem;
+          left: unset;
+          right: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,169 @@
+.whyUs__reason {
+  opacity: 0;
+  transition: opacity 1.5s ease-out,
+    transform 1.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  &.inView {
+    opacity: 1;
+  }
+
+  p {
+    margin-top: 2rem;
+    font-size: 18px;
+  }
+
+  h4 {
+    position: relative;
+    width: fit-content;
+
+    span {
+      font-weight: 500;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      animation: floatingIcons 8s linear infinite;
+    }
+
+    span:nth-of-type(2) {
+      font-family: var(--font-pphatton);
+      font-style: italic;
+    }
+  }
+
+  @keyframes floatingIcons {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(0.5rem, -0.5rem);
+    }
+    50% {
+      transform: translate(0, -1rem);
+    }
+    75% {
+      transform: translate(-0.5rem, -0.5rem);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  &__1,
+  &__3 {
+    transform: translateY(120px);
+
+    &.inView {
+      transform: translateY(0);
+    }
+  }
+
+  &__2,
+  &__4 {
+    transform: translateY(168px);
+
+    &.inView {
+      transform: translateY(48px);
+    }
+  }
+
+  &__1 {
+    h4 {
+      &::before {
+        background: url('/why-us/personalized-icon.svg') no-repeat center center;
+        width: 110px;
+        height: 143px;
+        top: -3rem;
+        right: -4.5rem;
+      }
+    }
+  }
+
+  &__2 {
+    transition-delay: 0.2s;
+    h4 {
+      &::before {
+        background: url('/why-us/creative-icon.svg') no-repeat center center;
+        width: 125px;
+        height: 125px;
+        right: -1.5rem;
+      }
+    }
+  }
+
+  &__3 {
+    transition-delay: 0.4s;
+    h4 {
+      &::before {
+        background: url('/why-us/stress-icon.svg') no-repeat center center;
+        width: 96px;
+        height: 132px;
+        top: -6rem;
+        right: -7rem;
+      }
+    }
+  }
+
+  &__4 {
+    transition-delay: 0.6s;
+    h4 {
+      &::before {
+        background: url('/why-us/smile-icon.svg') no-repeat center center;
+        width: 125px;
+        height: 125px;
+        top: -5rem;
+        right: -5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .whyUs__reason {
+    transition-delay: 0s;
+    &.inView {
+      transform: translateY(0);
+    }
+
+    p {
+      font-size: 14px;
+      margin-top: 1rem;
+    }
+
+    h4 {
+      line-height: 145%;
+      width: 100%;
+
+      &::before {
+        top: -1rem;
+      }
+    }
+
+    &__1,
+    &__3 {
+      transform: translateX(120px);
+      h4 {
+        &::before {
+          right: 0;
+          left: unset;
+        }
+      }
+    }
+
+    &__2,
+    &__4 {
+      transform: translateX(-120px);
+      text-align: end;
+
+      h4 {
+        margin-left: auto;
+        &::before {
+          left: 0;
+          right: unset;
+        }
+      }
+    }
+  }
+}

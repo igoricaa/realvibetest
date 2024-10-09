@@ -1,0 +1,26 @@
+.switcher {
+  display: flex;
+  align-items: center;
+}
+
+.languageOption {
+  color: #4c4c4c;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.languageOption:hover {
+  color: #07fff7;
+}
+
+.active {
+  color: #07fff7;
+}
+
+.separator {
+  color: #fff;
+  margin: 0 8px;
+}
