@@ -2,35 +2,35 @@
 
 import { useLocale, useTranslations } from 'next-intl';
 import styles from './LocaleSwitcher.module.scss';
-import { startTransition, useTransition } from 'react';
+import { useTransition } from 'react';
 import { useParams } from 'next/navigation';
-import { setUserLocale } from '@/services/locale';
+import { usePathname, useRouter } from '@/i18n/routing';
 // import { setUserLocale } from '@/services/locale';
 
 export default function LocaleSwitcher() {
   const t = useTranslations('nav.locale');
   const locale = useLocale();
-  // const router = useRouter();
-  // const [isPending, startTransition] = useTransition();
-  // const pathname = usePathname();
-  // const params = useParams();
+  const router = useRouter();
+  const [isPending, startTransition] = useTransition();
+  const pathname = usePathname();
+  const params = useParams();
 
   function onLanguageChange(event: any) {
     const nextLocale = event.target.dataset.locale;
     // debugger;
-    //   startTransition(() => {
-    //     // @ts-expect-error -- TypeScript will validate that only known `params`
-    //     // are used in combination with a given `pathname`. Since the two will
-    //     // always match for the current route, we can skip runtime checks.
-    //     router.replace({ pathname, params }, { locale: nextLocale });
-    //   });
-    // }
-
-    // const locale = value as Locale;
     startTransition(() => {
-      setUserLocale(nextLocale);
+      // @ts-expect-error -- TypeScript will validate that only known `params`
+      // are used in combination with a given `pathname`. Since the two will
+      // always match for the current route, we can skip runtime checks.
+      router.replace({ pathname, params }, { locale: nextLocale });
     });
   }
+
+  // const locale = value as Locale;
+  //   startTransition(() => {
+  //     setUserLocale(nextLocale);
+  //   });
+  // }
 
   return (
     <div className={styles.switcher}>

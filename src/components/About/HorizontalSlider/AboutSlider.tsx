@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import styles from './AboutSlider.module.scss';
-import  Link  from 'next/link';
+import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { useRef } from 'react';

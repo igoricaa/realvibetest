@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styles from './Header.module.scss';
 import logo from '@/../public/realvibe-logo.svg';
-import  Link  from 'next/link';
+import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import SideArea from './SideArea';
 import ThemeSwitcher from '../UI/ThemeSwitcher';

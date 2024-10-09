@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import styles from './About.module.scss';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import AboutSlider from './HorizontalSlider/AboutSlider';
 import Button from '../UI/Button';
 

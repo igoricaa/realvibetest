@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import  Link  from 'next/link';
+import { Link } from '@/i18n/routing';
 import Image from 'next/image';
 import heroImage from '../../public/hero-image.png';
 import { useScroll, motion, useTransform } from 'framer-motion';
